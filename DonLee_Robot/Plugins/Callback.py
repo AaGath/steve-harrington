@@ -82,7 +82,7 @@ async def cb_navg(bot, update: CallbackQuery):
 
     if ((index_val + 1 )== max_pages) or ((index_val + 1) == len(results)): # Max Pages
         temp_results.append([
-            InlineKeyboardButton("⏪ Back", callback_data=f"navigate({index_val}|back|{query})")
+            InlineKeyboardButton("⌫ Back", callback_data=f"navigate({index_val}|back|{query})")
         ])
 
     elif int(index_val) == 0:
@@ -96,7 +96,7 @@ async def cb_navg(bot, update: CallbackQuery):
 
     if not int(index_val) == 0:    
         temp_results.append([
-            InlineKeyboardButton(f"🔰 Page {index_val + 1}/{len(results) if len(results) < max_pages else max_pages} 🔰", callback_data="ignore")
+            InlineKeyboardButton(f"⌨︎ Page {index_val + 1}/{len(results) if len(results) < max_pages else max_pages} ⌨︎", callback_data="ignore")
         ])
     
     if show_invite and int(index_val) !=0 :
@@ -143,7 +143,7 @@ async def cb_navg(bot, update: CallbackQuery):
     
     reply_markup = InlineKeyboardMarkup(temp_results)
     
-    text=f"<i>Found</i> <code>{leng}</code> <i>Results For Your Query:</i> <code>{query}</code>"
+    text=🔍f"<i>Found</i> <code>{leng}</code> <i>Results For Your Request 🔍:</i> <code>{query}</code>"
         
     try:
         await update.message.edit(
@@ -800,7 +800,7 @@ async def cb_types(bot, update: CallbackQuery):
         [
             InlineKeyboardButton
                 (
-                    "🔙 Back", callback_data=f"settings"
+                    "⌫ Back", callback_data=f"settings"
                 )
         ]
     )
@@ -914,7 +914,7 @@ async def cb_toggle(bot, update: CallbackQuery):
         [
             InlineKeyboardButton
                 (
-                    "🔙 Back", callback_data=f"settings"
+                    "⌫ Back", callback_data=f"settings"
                 )
         ]
     )
@@ -1027,7 +1027,7 @@ async def cb_config(bot, update: CallbackQuery):
         [
             InlineKeyboardButton
                 (
-                    "🔙 Back", callback_data=f"settings"
+                    "⌫ Back", callback_data=f"settings"
                 )
         ]
     )
@@ -1101,7 +1101,7 @@ async def cb_max_buttons(bot, update: CallbackQuery):
         [
             InlineKeyboardButton
                 (
-                    "🔙 Back", callback_data=f"config({chat_id})"
+                    "⌫ Back", callback_data=f"config({chat_id})"
                 )
         ]
     ]
@@ -1167,7 +1167,7 @@ async def cb_max_page(bot, update: CallbackQuery):
         [
             InlineKeyboardButton
                 (
-                    "🔙 Back", callback_data=f"config({chat_id})"
+                    "⌫ Back", callback_data=f"config({chat_id})"
                 )
         ]
 
@@ -1342,7 +1342,7 @@ async def cb_pm_file(bot, update: CallbackQuery):
             [
                 InlineKeyboardButton
                     (
-                        "Back 🔙", callback_data=f"config({chat_id})"
+                        "Back ⌫", callback_data=f"config({chat_id})"
                     )
             ]
         ]
@@ -1352,13 +1352,13 @@ async def cb_pm_file(bot, update: CallbackQuery):
             [
                 InlineKeyboardButton
                     (
-                        "Enable ✅", callback_data=f"set(inPM|True|{chat_id}|{value})"
+                        "Enable ✔︎", callback_data=f"set(inPM|True|{chat_id}|{value})"
                     )
             ],
             [
                 InlineKeyboardButton
                     (
-                        "Back 🔙", callback_data=f"config({chat_id})"
+                        "Back ⌫", callback_data=f"config({chat_id})"
                     )
             ]
         ]
@@ -1437,7 +1437,7 @@ async def cb_accuracy(bot, update: CallbackQuery):
         [
             InlineKeyboardButton
                 (
-                    "🔙 Back", callback_data=f"config({chat_id})"
+                    "⌫ Back", callback_data=f"config({chat_id})"
                 )
         ]
     ]
@@ -1602,14 +1602,14 @@ async def cb_about(bot, update: CallbackQuery):
     text=f"<i><u>Bot's Status</u></i>\n"
     text+=f"\n<b><i>Bot's Uptime:</i></b> <code>{time_formatter(time.time() - start_uptime)}</code>\n"
     text+=f"\n<b><i>Bot Funtion:</i></b> <i>Auto Filter Files</i>\n"
-    text+=f"""\n<b><i>Bot Support:</i></b> <a href="https://t.me/Mo_Tech_Group">@Mo_Tech_Group</a>\n"""
-    text+="""\n<b><i>Source Code:</i></b> <a href="https://github.com/PR0FESS0R-99/DonLee_Robot">Source</a>"""
+    text+=f"""\n<b><i>Bot Support:</i></b> <a href="https://t.me/PrimeFlix_Movies">@PrimeFlix_Movies</a>\n"""
+    text+="""\n<b><i>Source Code:</i></b> <a href="https://t.me/PrimeFlix_Movies">☠︎︎ Source ☠︎︎</a>"""
 
     buttons = [
         [
             InlineKeyboardButton
                 (
-                    "My Dev ⚡", url="https://t.me/MRK_YT"
+                    "My Dev ⚡", url="https://t.me/Cyber_Dom"
                 ),
                 
             InlineKeyboardButton
@@ -1640,14 +1640,14 @@ async def callback_data(bot, update: CallbackQuery):
 
     if query_data == "start":
         buttons = [[
-            InlineKeyboardButton('My Dev 👨‍🔬', url='https://t.me/Mrk_YT'),
-            InlineKeyboardButton('Source Code 🧾', url ='https://github.com/PR0FESS0R-99/DonLee_Robot')
+            InlineKeyboardButton('␈My Dev 👨‍🔬␈', url='https://t.me/Cyber_Dom'),
+            InlineKeyboardButton('', url ='https://github.com/PR0FESS0R-99/DonLee_Robot')
         ],[
-            InlineKeyboardButton('🛠 Support 🛠', url='https://t.me/mo_Tech_yt')
+            InlineKeyboardButton('⚠︎ PrimeFlix ⚠︎ ', url='https://t.me/PrimeFlix_Movies')
         ],[
-            InlineKeyboardButton('⚙ Help ⚙', callback_data="help")
+            InlineKeyboardButton('⚙ Movies ⚙', url='https://t.me/PrimeFlix_Movies')
         ],[
-            InlineKeyboardButton('💫 Deploy Video 💫', url='https://youtu.be/uAHl5jvnrhk')
+            InlineKeyboardButton('☢︎︎ Series ☢︎︎', url='https://t.me/TvseriesCollectionsPrimeflix')
         ]]
     
         reply_markup = InlineKeyboardMarkup(buttons)
